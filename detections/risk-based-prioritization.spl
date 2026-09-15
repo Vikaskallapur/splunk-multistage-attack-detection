@@ -1,0 +1,15 @@
+index=soc_lab sourcetype="WinEventLog:Security" EventCode=4625
+| bin _time span=5m
+| stats count as Failed_Logins by _time Account_Name ComputerName
+| eval Risk_Score=case(
+    Failed_Logins>=5,90,
+    Failed_Logins>=3,60,
+    Failed_Logins>=1,30
+)
+| eval Risk_Level=case(
+    Risk_Score>=80,"HIGH",
+    Risk_Score>=50,"MEDIUM",
+    Risk_Score<50,"LOW"
+)
+| sort -Risk_Score
+| table _time Account_Name ComputerName Failed_Logins Risk_Score Risk_Level
