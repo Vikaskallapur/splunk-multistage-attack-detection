@@ -1,0 +1,4 @@
+index=soc_lab sourcetype="WinEventLog:Security" EventCode=4625
+| stats count as Failed_Logins by Account_Name ComputerName
+| where Failed_Logins >= 3
+| sort -Failed_Logins
