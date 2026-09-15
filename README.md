@@ -147,3 +147,42 @@ splunk-multistage-attack-detection/
 │
 └── investigation/
     └── investigation-workflow.md
+## Detection Screenshots
+
+### 1. Brute Force Detection
+
+Detects repeated Windows failed-login events (Event ID 4625) within a 5-minute window. In the lab data, Administrator and vikas each had 5 failed login events.
+
+![Brute Force Detection](screenshots/brute-force-detection.png)
+
+### 2. Risk-Based Incident Prioritization
+
+Assigns a risk score based on failed-login volume and classifies activity as HIGH, MEDIUM, or LOW priority.
+
+![Risk-Based Prioritization](screenshots/risk-based-prioritization.png)
+
+### 3. Authentication Investigation
+
+Correlates Windows authentication and process-creation events within a defined investigation time window.
+
+![Investigation Workflow](screenshots/investigation-workflow.png)
+
+### 4. Splunk Alert Configuration
+
+Shows the configured Splunk detection alerts used to support SOC monitoring and triage.
+
+![Splunk Alerts](screenshots/splunk-alerts.png)
+
+### 5. SOC Security Monitoring Dashboard
+
+Provides a centralized view of failed logins, successful login activity, and Windows process creation telemetry.
+
+![SOC Dashboard](screenshots/soc-dashboard.png)
+
+## MITRE ATT&CK
+
+The detection logic is mapped to relevant MITRE ATT&CK techniques.
+
+See the full mapping:
+
+[MITRE ATT&CK Detection Mapping](mitre-attack.md)
