@@ -127,7 +127,7 @@ Investigation documentation:
 
 ## Repository Structure
 
-```text
+
 splunk-multistage-attack-detection/
 │
 ├── README.md
@@ -145,6 +145,7 @@ splunk-multistage-attack-detection/
 │   ├── suspicious-process.spl
 │   └── risk-based-prioritization.spl
 │
+```text
 └── investigation/
     └── investigation-workflow.md
 ## Detection Screenshots
