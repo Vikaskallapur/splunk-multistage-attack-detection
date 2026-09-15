@@ -9,7 +9,7 @@
 
 A Splunk-based Security Operations Center (SOC) monitoring and detection project designed to identify suspicious authentication activity and Windows process execution.
 
-The project uses Windows Security Event Logs and custom Splunk Search Processing Language (SPL) queries to detect brute-force activity, repeated authentication failures, successful logins following failures, suspicious process execution, and prioritize incidents using risk scoring.
+The project uses Windows Security Event Logs and custom Splunk Search Processing Language (SPL) queries to identify brute-force-like authentication activity, repeated authentication failures, investigate authentication sequences, monitor suspicious process execution, and prioritize incidents using risk scoring.
 
 ## Objectives
 
