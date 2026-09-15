@@ -1,0 +1,4 @@
+index=soc_lab sourcetype="WinEventLog:Security" EventCode=4688
+| search New_Process_Name="*powershell.exe" OR New_Process_Name="*cmd.exe" OR New_Process_Name="*wscript.exe" OR New_Process_Name="*cscript.exe"
+| stats count by New_Process_Name
+| sort -count
