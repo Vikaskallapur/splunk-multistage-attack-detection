@@ -6,9 +6,9 @@ This project maps its detection logic to relevant MITRE ATT&CK techniques.
 |---|---|---|---|
 | Brute Force Login Detection | Brute Force | T1110 | Detect repeated authentication failures |
 | Multiple Failed Logins | Brute Force | T1110 | Identify repeated credential attempts |
-| Successful Login After Failures | Valid Accounts | T1078 | Investigate possible use of compromised credentials |
+| Successful Login After Failures | Valid Accounts | T1078 | Investigate potentially suspicious use of valid credentials |
 | Suspicious Process Detection | Command and Scripting Interpreter | T1059 | Detect potentially suspicious command/scripting activity |
-| Process Creation Monitoring | Create or Modify System Process | T1543 | Provides process-creation telemetry for investigation |
+| Process Creation Monitoring | Process Discovery / Execution Telemetry | — | Provides process-creation telemetry for investigation |
 
 ## Detection Context
 
